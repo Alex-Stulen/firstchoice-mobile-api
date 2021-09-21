@@ -19,10 +19,11 @@ RETURN_STATUSES = {
 
 # Each request must contain headers with an Authorization key and a Token
 REQUIRED_HEADERS_FOR_TOKEN_AUTH = {
-	'Authorization': 'Token 123123123' # Key: Authorization - required.
-									   # Word 'Token' in Value - required.
-									   # One space after 'Token' - required.
-									   # Only one space in Value - required.
+	'Authorization': 'Token 123123123',
+	# Key: Authorization - required.
+	# Word 'Token' in Value - required.
+	# One space after 'Token' - required.
+	# Only one space in Value - required.
 }
 
 
