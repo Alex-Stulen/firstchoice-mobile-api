@@ -16,8 +16,7 @@ def Verification():
 	# Key Token = None for python or null for JS if authorization is failed
 	returns = {
 		'Token': '...', # Authorization Token
-		'verified': 'boolean field', # True - if verification is successful. 
-									 # False - if verification is not successful.
+		'verified': 'boolean field', # True - if verification is successful. False - if verification is not successful.
         'employee_id_is_valid': 'boolean field',
         'last_four_ssn_is_valid': 'boolean field',
 	}

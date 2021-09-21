@@ -16,8 +16,7 @@ def Login():
 	# Key Token = None for python or null for JS if authorization is failed
 	returns = {
 		'Token': '...', # Authorization Token
-		'authorized': 'boolean field', # True - if authorization is successful
-									  # False - if authorization is not successful
+		'authorized': 'boolean field', # True - if authorization is successful. False - if authorization is not successful
   		'email_is_valid': 'boolean field',
   		'password_is_valid': 'boolean field'
 	}
