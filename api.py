@@ -4,6 +4,7 @@
 # all responses will be serialized to the JSON format
 
 site_url = 'https://firstchoicenurses.com'
+dev_site_url = 'https://dev.firstchoicenurses.com'
 api_url = '/api/v1/mobile/'
 example_api_url = 'https://firstchoicenurses.com/api/v1/mobile/.../'
 
