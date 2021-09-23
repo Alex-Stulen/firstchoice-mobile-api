@@ -19,9 +19,9 @@ def Get_Assigned_Shifts():
 	# if shifts is not found -> assigned_shifts length equal 0. 
 	returns = {
 		'assigned_shifts': [
-			{'pk': 'primary key for shift'},
+			{'the object is returned as if you made a request to receive detailed information about the shift. Read `get_shift.py`'},
 			...,
 			...,
-			{'pk': 'primary key for shift'}
+			{'the object is returned as if you made a request to receive detailed information about the shift. Read `get_shift.py`'}
 		]
 	}
