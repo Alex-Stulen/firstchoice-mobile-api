@@ -18,7 +18,7 @@ def Get_Nurse():
 
 	# if nurse with this pk is not found response will returns status code: 404 Not Found.
 	returns = {
-		'user': {
+		'nurse': {
 			'pk': 'primary key for nurse',
 			'role': 'nurse',
 			'email': 'email',
