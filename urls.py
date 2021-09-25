@@ -4,7 +4,7 @@
 """===================================================================="""
 
 # Login
-'https://dev.firstchoicenurses.com/api/v1/mobile/login/'
+'https://dev.firstchoicenurses.com/api/v1/mobile/auth/login/'
 method = 'POST'
 headers = 'special headers are not needed'
 post_fields = {
@@ -44,7 +44,7 @@ returns = {
 """===================================================================="""
 
 # Verification
-'https://dev.firstchoicenurses.com/api/v1/mobile/verification/'
+'https://dev.firstchoicenurses.com/api/v1/mobile/auth/verification/'
 method = 'POST'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 post_fields = {
