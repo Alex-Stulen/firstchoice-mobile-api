@@ -23,6 +23,24 @@ returns = {
     "email_is_valid": true
 }
 
+""" For facility """
+post_fields = {
+    "email": "testfacility",
+    "password": "testqwerty"
+}
+
+returns = {
+    "password_is_valid": true,
+    "Token": "294e355fe08b3713a4a2591aef682453204d3cb4",
+    "user": {
+        "pk": 29,
+        "role": "facility"
+    },
+    "authorized": true,
+    "email_is_valid": true
+}
+
+
 """===================================================================="""
 
 # Verification
