@@ -6,6 +6,7 @@
 # Login
 'https://dev.firstchoicenurses.com/api/v1/mobile/login/'
 method = 'POST'
+headers = 'special headers are not needed'
 post_fields = {
     "email": "testnurse@gmail.com",
     "password": "qwertY11"
@@ -27,6 +28,7 @@ returns = {
 # Verification
 'https://dev.firstchoicenurses.com/api/v1/mobile/verification/'
 method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 post_fields = {
     "pk": "4065",
     "employee_id": "4321",
