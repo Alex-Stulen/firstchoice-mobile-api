@@ -21,6 +21,12 @@ def Login():
 
 		if user['role'] is facility you must redirect to app without verification page.
 
+		For nurse:
+			login is email
+
+		For facility:
+			login is username
+
 	"""
 	returns = {
 		'Token': '...', # Authorization Token
