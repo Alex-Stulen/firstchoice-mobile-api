@@ -9,6 +9,7 @@ def Verification():
 	headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 
 	post_fields = {
+		'pk': '<type: int> pk - the primary key of the user (nurse) to be verified',
 		'employee_id': 'employee id field', # required
 		'last_four_ssn': 'last four ssn id numbers' # required
 	}
