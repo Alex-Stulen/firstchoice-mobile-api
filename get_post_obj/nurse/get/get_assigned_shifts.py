@@ -8,7 +8,7 @@ def Get_Assigned_Shifts():
 			to get assigned shift, you do not need to specify the fields for a get request. 
 			It is enough to specify the primary key of the nurse in the address bar instead of <pk>.
 	"""
-	api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/nurse/<pk>/assigned-shifts/'
+	api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/nurse/assigned-shifts/'
 
 	method = 'GET'
 	headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
