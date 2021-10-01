@@ -15,6 +15,9 @@ def Get_Shift():
 
 	get_fields = 'special get fields are not needed'
 
+	# WARNING: 
+	#	At the moment, the response data given in the documentation does not match what is being returned. 
+	#	In a short time the documentation will be updated.
 	returns = {
 		'shift': {
 			'hospital':{
