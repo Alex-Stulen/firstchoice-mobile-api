@@ -17,15 +17,13 @@ def Verification():
 	"""
 	Note:
 		Key Token = None for python or null for JS if authorization is failed
-		if authorization is failed: response status = 200 and response will have info about field which field was wrong.
-	
-		Key user = null if authorization is failed.
+		if authorization is failed: 
+			response status = 401
 		
 		verification page only for nurse.
 	"""
 
 	returns = {
-		'Token': '...', # Authorization Token
 		'verified': 'boolean field', # True - if verification is successful. False - if verification is not successful.
 		'user': {
 			'pk': 'primary key for nurse',
