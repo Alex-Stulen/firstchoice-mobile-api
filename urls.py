@@ -83,3 +83,20 @@ returns = {
 	}
 
 """===================================================================="""
+
+# Nurse certified shifts
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/certified-shifts/'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed' 
+
+returns = {
+		'certified_shifts': [
+			{'the object is returned as if you made a request to receive detailed information about the shift. Read `get_shift.py`'},
+			...,
+			...,
+			{'the object is returned as if you made a request to receive detailed information about the shift. Read `get_shift.py`'}
+		]
+	}
+
+"""===================================================================="""
