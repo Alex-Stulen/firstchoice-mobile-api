@@ -14,26 +14,17 @@ def Login():
 
 	"""
 	Note:
-		Key Token = None for python or null for JS if authorization is failed.
 		if authorization is failed: 
 			response status = 401
-
-		if user['role'] is facility you must redirect to app without verification page.
-
-		For nurse:
-			login is email
-
-		For facility:
-			login is username
-
 	"""
 	returns = {
-		'token': '...', # Authorization Token
-		'authorized': 'boolean field', # True - if authorization is successful. False - if authorization is not successful
+		'token': '... <type: str>', # Authorization Token
+		'authorized': '<type: bool>', # True - if authorization is successful. False - if authorization is not successful
 		'user': {
-			'pk': 'primary key for nurse or facility',
-			'role': 'nurse or facility',
+			'pk': 'primary key for nurse or facility <type: int>',
+			'role': 'nurse or facility <type: str>',
 		}
-  		'email_is_valid': 'boolean field',
-  		'password_is_valid': 'boolean field'
+  		'email_is_valid': '<type: bool>',
+  		'password_is_valid': '<type: bool>'
 	}
+

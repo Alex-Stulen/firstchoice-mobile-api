@@ -43,6 +43,18 @@ returns = {
 
 """===================================================================="""
 
+# Logout
+
+'https://firstchoicenurses.com/api/v1/mobile/auth/logout/'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed'
+
+returns = {}
+
+
+"""===================================================================="""
+
 # Verification
 'https://dev.firstchoicenurses.com/api/v1/mobile/auth/verification/'
 method = 'POST'

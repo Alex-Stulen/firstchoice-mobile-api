@@ -82,19 +82,10 @@ def Get_Shift():
 			},
 			'client': '<type: str>',
 			'department': '<type: str>',
-			'date': {
-				'year': '<type: int>',
-				'month': '<type: int>',
-				'day': '<type: int>'
-			},
+			'date': '<type: str>',
 			'classification': '<type: str>',
 			'ordered_by': '<type: str>',
-			'received': {
-				'year': '<type: int>',
-				'month': '<type: int>',
-				'day': '<type: int>',
-				'time': '<type: str>'
-			},
+			'received': {'<type: int>',
 			'received_by': 'received by <type: str>',
 			'shift': '<type: str>',
 			'start_time': '<type: int>',
@@ -104,19 +95,11 @@ def Get_Shift():
 			'overtime_hours': '<type: float>',
 			'holiday_hours': '<type: float>',
 			'travel': '<type: float>',
-			'check_date': {
-				'year': '<type: int>',
-				'month': '<type: int>',
-				'day': '<type: int>'
-			},
+			'check_date': '<type: str>',
 			'check_number': '<type: int>',
 			'check_amount': '<type: float>',
 			'invoice_number': '<type: str>',
-			'invoice_date': {
-				'year': '<type: int>',
-				'month': '<type: int>',
-				'day': '<type: int>'
-			},
+			'invoice_date': '<type: str>'
 			'invoice_amount': '<type: float>',
 			'ok_to_bill': '<type: bool>',
 			'ok_overtime': '<type: bool>',
@@ -125,11 +108,7 @@ def Get_Shift():
 			'paychex_id': '<type: int>',
 			'worker': '<type: str>',
 			'keyfield': '<type: str>',
-			'timestamp': {
-				'year': '<type: int>',
-				'month': '<type: int>',
-				'day': '<type: int>',
-				'time': '<type: str>'
-			}
+			'timestamp': '<type: int>'
 		}
 	}
+

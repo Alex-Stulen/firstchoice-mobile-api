@@ -38,14 +38,5 @@ REQUIRED_HEADERS_FOR_TOKEN_AUTH = {
 	 IF  Invalid token. 
 	 OR  Authentication credentials were not provided. -> Perhaps the Authorization key in headers is missing.
 	 OR  the user has not passed verification or authorization.
-	 
-	 fields that were invalid will be returned with a boolean operator. For example: {'employee_id_is_valid': False}.
-	 erroneous field will be sent as field name and prefix at the end: {'<field_name>_is_valid': False or True}.
 """
 
-"""
-	Authorization.
-
-	Key Token in response equal `None` for python or `null` for JS if user authorization is failed. 
-
-"""
