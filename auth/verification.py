@@ -2,7 +2,7 @@
 
 def Verification():
 
-	api_url = 'https://firstchoicenurses.com/api/v1/mobile/auth/verification/'
+	api_url = 'https://firstchoicenurses.com/api/v1/mobile/auth/verification'
 
 	method = 'POST'
 	headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH

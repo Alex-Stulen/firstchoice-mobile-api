@@ -1,7 +1,7 @@
 # Logout ability
 
 def Logout():
-	api_url = 'https://firstchoicenurses.com/api/v1/mobile/auth/logout/'
+	api_url = 'https://firstchoicenurses.com/api/v1/mobile/auth/logout'
 
 	method = 'GET'
 	headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH

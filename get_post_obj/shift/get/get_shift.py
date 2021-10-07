@@ -8,7 +8,7 @@ def Get_Shift():
 			to get information about a shift, you do not need to specify the fields for a get request. 
 			It is enough to specify the primary key of the shift in the address bar instead of <pk>.
 	"""
-	api_utl = 'https://firstchoicenurses.com/api/v1/mobile/obj/shift/<pk>/'
+	api_utl = 'https://firstchoicenurses.com/api/v1/mobile/obj/shift/<pk>'
 
 	method = 'GET'
 	headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH

@@ -2,7 +2,7 @@
 
 def Login():
 
-	api_url = 'https://firstchoicenurses.com/api/v1/mobile/auth/login/'
+	api_url = 'https://firstchoicenurses.com/api/v1/mobile/auth/login'
 
 	method = 'POST'
 	headers = 'special headers are not needed'

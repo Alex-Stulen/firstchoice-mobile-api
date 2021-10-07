@@ -4,7 +4,7 @@
 """===================================================================="""
 
 # Login
-'https://dev.firstchoicenurses.com/api/v1/mobile/auth/login/'
+'https://dev.firstchoicenurses.com/api/v1/mobile/auth/login'
 method = 'POST'
 headers = 'special headers are not needed'
 post_fields = {
@@ -44,7 +44,7 @@ returns = {
 """===================================================================="""
 
 # Logout
-'https://firstchoicenurses.com/api/v1/mobile/auth/logout/'
+'https://firstchoicenurses.com/api/v1/mobile/auth/logout'
 method = 'GET'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 get_fields = 'special get fields are not needed'
@@ -55,7 +55,7 @@ returns = {}
 """===================================================================="""
 
 # Verification
-'https://dev.firstchoicenurses.com/api/v1/mobile/auth/verification/'
+'https://dev.firstchoicenurses.com/api/v1/mobile/auth/verification'
 method = 'POST'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 post_fields = {
@@ -79,7 +79,7 @@ returns = {
 """===================================================================="""
 
 # Get current Nurse Detail info
-'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/'
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse'
 method = 'GET'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 get_fields = 'special get fields are not needed'
@@ -93,7 +93,7 @@ returns = {
 """===================================================================="""
 
 # Nurse assigned shifts
-'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/assigned-shifts/'
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/assigned-shifts'
 method = 'GET'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 get_fields = 'special get fields are not needed' 
@@ -110,7 +110,7 @@ returns = {
 """===================================================================="""
 
 # Nurse certified shifts
-'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/certified-shifts/'
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/certified-shifts'
 method = 'GET'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 get_fields = 'special get fields are not needed' 

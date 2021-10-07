@@ -8,7 +8,7 @@ def Get_Nurse():
 			to get information about a nurse, you do not need to specify the fields for a get request.
 	"""
 
-	api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/nurse/'
+	api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/nurse'
 
 	method = 'GET'
 	headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
