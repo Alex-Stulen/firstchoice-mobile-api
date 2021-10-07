@@ -5,20 +5,19 @@ def Get_Nurse():
 
 	"""
 		Note:
-			to get information about a nurse, you do not need to specify the fields for a get request. 
-			It is enough to specify the primary key of the nurse in the address bar instead of <pk>.
+			to get information about a nurse, you do not need to specify the fields for a get request.
 	"""
 
-	api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/nurse/<pk>/'
+	api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/nurse/'
 
 	method = 'GET'
 	headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 
 	get_fields = 'special get fields are not needed'
 
-	# if nurse with this pk is not found response will returns status code: 404 Not Found.
+	# The information in the response was not provided in full
 	returns = {
-		'nurse': {
+		'user': {
 			'pk': 'primary key for nurse',
 			'role': 'nurse',
 			'email': 'email',
