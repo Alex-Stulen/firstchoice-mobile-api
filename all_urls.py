@@ -7,3 +7,5 @@
 '/api/v1/mobile/obj/nurse/'                   # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
 '/api/v1/mobile/obj/nurse/assigned-shifts/'   # Get current Nurse assigned shifts. Read `get_post_obj/nurse/get_assigned_shifts.py`
 '/api/v1/mobile/obj/nurse/certified-shifts/'  # Get current Nurse certified shifts. Read `get_post_obj/nurse/get_certified_shifts.py`
+
+
