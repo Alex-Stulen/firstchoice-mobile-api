@@ -125,3 +125,13 @@ returns = {
 	}
 
 """===================================================================="""
+
+# Generate Shift
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/generate-shift/'
+method = 'GET'
+headers = 'special headers are not needed'
+get_fields = 'special get fields are not needed'
+
+returns = {'shift object. Read `get_shift.py`'}
+
+"""===================================================================="""
