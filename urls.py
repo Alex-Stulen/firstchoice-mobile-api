@@ -126,6 +126,18 @@ returns = {
 
 """===================================================================="""
 
+# Clock-in/CLock-out shift ability
+method = 'PATCH'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+patch_fields = {
+        "latitude": <type: float>,
+        "longitude": <type:float>,
+    }
+
+returns = {'shift object. Read `get_shift.py`'}
+
+"""===================================================================="""
+
 # Generate Shift
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/generate-shift/'
 method = 'GET'

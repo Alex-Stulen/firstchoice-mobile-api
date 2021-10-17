@@ -8,4 +8,6 @@
 '/api/v1/mobile/obj/nurse/assigned-shifts'   # Get current Nurse assigned shifts. Read `get_post_obj/nurse/get_assigned_shifts.py`
 '/api/v1/mobile/obj/nurse/certified-shifts'  # Get current Nurse certified shifts. Read `get_post_obj/nurse/get_certified_shifts.py`
 
+'/api/v1/mobile/shift/<int:pk>/clock-in'    # Indicates the fields to shift when the nurse started the shift
+'/api/v1/mobile/shift/<int:pk>/clock-out'   # Indicates the fields to shift when the nurse stop the shift
 
