@@ -127,6 +127,7 @@ returns = {
 """===================================================================="""
 
 # Clock-in/CLock-out shift ability
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/<int:pk>/(clock-in/clock-out)'
 method = 'PATCH'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 patch_fields = {

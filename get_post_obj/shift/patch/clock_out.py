@@ -3,7 +3,7 @@
 
 def ClockOut()
 
-    api_url = 'https://firstchoicenurses.com/api/v1/mobile/shift/<int:pk>/clock-out'
+    api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/shift/<int:pk>/clock-out'
 
     method = 'PATCH'
     headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
