@@ -139,6 +139,27 @@ returns = {'shift object. Read `get_shift.py`'}
 
 """===================================================================="""
 
+# Hospital list
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/hospital/list'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed'
+returns = {'hospital list. Read `hospital_list.py`'}
+
+"""==================================================================="""
+
+# All shifts for special hospital
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/hospital/<int:pk>/all-shifts'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = {
+            "pk": "<type: int> - primary key for special hospital"
+        }
+returns = {'list with shifts objects. Read `get_shift.py`'}
+
+"""==================================================================="""
+
+
 # Generate Shift
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/generate-shift/'
 method = 'GET'

@@ -11,3 +11,5 @@
 '/api/v1/mobile/obj/shift/<int:pk>/clock-in'    # Indicates the fields to shift when the nurse started the shift
 '/api/v1/mobile/obj/shift/<int:pk>/clock-out'   # Indicates the fields to shift when the nurse stop the shift
 
+'/api/v1/mobile/obj/hospital/list'              # Returns all hospitals
+'/api/v1/mobile/obj/hospital/<int:pk>/all-shifts' # Returns all shifts for special hospital (<int:pk>) - primary key for hospital
