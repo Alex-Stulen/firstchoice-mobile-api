@@ -159,6 +159,32 @@ returns = {'list with shifts objects. Read `get_shift.py`'}
 
 """==================================================================="""
 
+# Filter shifts by hospitals && internaFrom && internalTo
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/filter'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields {
+            'hospitals_id': <type: list>,
+            'internalFrom': <type: int>,
+            'internalTo': <type: int>
+        }
+
+"""==================================================================="""
+
+# Shift Update
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/<int:pk>/update'
+method = 'PUT'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+put_fields {'any fields for shift update; For example:',
+            
+            'classification': 'lololo',
+            'comments': 'some comment',
+            'cancelled': true
+        }
+
+returns = {'shift object. Read `get_shift.py`'}
+
+"""=================================================================="""
 
 # Generate Shift
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/generate-shift/'
