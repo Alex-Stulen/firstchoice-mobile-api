@@ -2,16 +2,10 @@
 
 def GetShiftsByHospitalsFilter():
     
-    api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/shift/filter'
+    api_url = 'https://firstchoicenurses.com/api/v1/mobile/obj/shift/filter?hospitals=1,2,3&internalFrom=123123&internalTo=123123'
     
     method = 'GET'
     headers = REQUIRE_HEADERS_FOR_TOKEN_AUTH
-
-    get_fields = {
-                'hospitals_id': <type: list>,
-                'internal_from': <type: int>,
-                'internal_to': <type: int>
-            }
 
     returns {'shift objects. Read `get_shift.py`'}
 

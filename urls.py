@@ -160,14 +160,11 @@ returns = {'list with shifts objects. Read `get_shift.py`'}
 """==================================================================="""
 
 # Filter shifts by hospitals && internaFrom && internalTo
-'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/filter'
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/filter?hospitals=1,2,3&internalFrom=1233412&internalTo=123123'
 method = 'GET'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
-get_fields {
-            'hospitals_id': <type: list>,
-            'internalFrom': <type: int>,
-            'internalTo': <type: int>
-        }
+
+returns = {'short shift objects. Read `get_shift.py`'}
 
 """==================================================================="""
 
