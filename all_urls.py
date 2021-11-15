@@ -7,6 +7,9 @@
 
 '/api/v1/mobile/obj/nurse'                        # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
 '/api/v1/mobile/obj/nurse/assigned-shifts'        # Get current Nurse assigned shifts. Read `get_post_obj/nurse/get_assigned_shifts.py`
+'/api/v1/mobile/obj/nurse/assign-to-shift'	  # Set nurse to special shift
+'/api/v1/mobile/obj/nurse/cancel-assign-to-shift' # Remove nurse from special shift
+'/api/v1/mobile/obj/nurse/past-shifts'		  # Get all past shifts for nurse
 '/api/v1/mobile/obj/nurse/certified-shifts'       # Get current Nurse certified shifts. Read `get_post_obj/nurse/get_certified_shifts.py`
 
 '/api/v1/mobile/obj/shift/<int:pk>/clock-in'      # Indicates the fields to shift when the nurse started the shift
@@ -16,8 +19,4 @@
 
 '/api/v1/mobile/obj/hospital/list'                # Returns all hospitals
 '/api/v1/mobile/obj/hospital/<int:pk>/all-shifts' # Returns all shifts for special hospital (<int:pk>) - primary key for hospital
-
-
-
-
 

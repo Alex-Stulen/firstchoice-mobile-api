@@ -123,6 +123,44 @@ returns = {
 
 """===================================================================="""
 
+# Nurse assign to shift
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/assign-to-shift'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields = {
+		"shift_id" <type: integer or string>
+	} 
+
+returns = {
+		'assign_shift': {...}
+	}
+
+"""===================================================================="""
+
+# Nurse cancel assign to shift
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/cancel-assign-to-shift'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields = {
+		"shift_id" <type: integer or string>
+	} 
+
+returns = 'no content'
+
+"""===================================================================="""
+
+# Nurse all past shifts
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/past-shifts'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed'
+
+returns = {
+		[...]
+	}
+
+"""===================================================================="""
+
 # Nurse certified shifts
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/certified-shifts'
 method = 'GET'
