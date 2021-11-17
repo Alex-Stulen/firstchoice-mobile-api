@@ -106,6 +106,40 @@ returns = {
 
 """===================================================================="""
 
+# Update current Nurse Profile info
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/profile/update'
+method = 'PATCH'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+patch_fields = 'can contain this fields':('email', 'fname', 'lname', 'ssn', 'classification', 'address', 'city',
+                  'st', 'zipcode', 'phone', 'phone2', 'hire_date', 'term_date', 'dob')
+	# Note: all fields is string type.
+	example:{
+		"fname": "TestTest",
+		"lname": "LastLast",
+		"hire_date": "2021-04-12",
+		"term_date": null
+	}
+
+returns = example: {
+	    "email": "some@gmail.com",
+	    "fname": "TestTest",
+	    "lname": "LastLast",
+	    "ssn": "111-22-3333",
+	    "classification": "test",
+	    "address": "test",
+	    "city": "test",
+	    "st": "va",
+	    "zipcode": "",
+	    "phone": "",
+	    "phone2": "",
+	    "hire_date": "2021-04-12",
+	    "term_date": null,
+	    "dob": "2021-10-06"
+	}
+
+"""===================================================================="""
+
+
 # Nurse assigned shifts
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/assigned-shifts'
 method = 'GET'
@@ -146,6 +180,20 @@ post_fields = {
 	} 
 
 returns = 'no content'
+
+"""===================================================================="""
+
+# Nurse submit shift
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/<int:pk>/submit-by-nurse' # <int:pk> - primary key for shift
+method = 'PUT'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields = {
+		'some fields for update shift fields. Like in Shift Update ability'
+	} 
+
+returns = {
+	'shift data. Read `get_shift.py`'
+}
 
 """===================================================================="""
 

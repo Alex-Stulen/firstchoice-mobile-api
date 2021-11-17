@@ -6,6 +6,7 @@
 '/api/v1/mobile/auth/logout'                      # Logout url. Read `auth/logout.py`
 
 '/api/v1/mobile/obj/nurse'                        # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
+'/api/v1/mobile/obj/nurse/profile/update'	  # Updated fields for current nurse
 '/api/v1/mobile/obj/nurse/assigned-shifts'        # Get current Nurse assigned shifts. Read `get_post_obj/nurse/get_assigned_shifts.py`
 '/api/v1/mobile/obj/nurse/assign-to-shift'	  # Set nurse to special shift
 '/api/v1/mobile/obj/nurse/cancel-assign-to-shift' # Remove nurse from special shift
