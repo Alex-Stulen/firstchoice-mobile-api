@@ -6,7 +6,7 @@
 The first link will save the files to the global downloads folder
 The second link will save the files to a specific folder at the specified path.
 	Example:
-		if you want to save files to a folder along the path ('/<global folder for uploads:indicated automatically>/test/folder')
+		if you want to save files to a folder in a special path ('/<global folder for uploads:indicated automatically>/test/folder')
 		in folder 'test/folder'.
 		you must send a request to '/api/v1/mobile/upload-files/test/folder'
 		
