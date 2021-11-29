@@ -22,3 +22,6 @@
 '/api/v1/mobile/obj/hospital/list'                 # Returns all hospitals
 '/api/v1/mobile/obj/hospital/<int:pk>/all-shifts'  # Returns all shifts for special hospital (<int:pk>) - primary key for hospital
 
+'/api/v1/mobile/upload-files'  			   # Saves downloaded files to the system
+'/api/v1/mobile/upload-files/<path:folder_paths>'  # Saves downloaded files to the system in a specific folder.
+
