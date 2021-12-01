@@ -108,19 +108,6 @@ The second link will save the files to a specific folder at the specified path.
 		
 method = 'POST'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
-post_fields = {
-                'submitted_nurse_shift_files': <type: list. Optional>,
-                'fields for update shift'...
-            }
-            # Note:
-            	'submitted_nurse_shift_files' - cannot be empty. Can contain one file path.
-            	'submitted_nurse_shift_files' - is an array with file paths.
-            	example:
-            		{
-            			'submitted_nurse_shift_files': ['/uploads/test/folder/test_icon.png']
-            			 OR
-            			'submitted_nurse_shift_files': ['/uploads/test/folder/file1.pdf', '/uploads/test/folder/file2.pdf', ...]
-            		}
 
 returns = 'Read `get_shift.py`'
 
@@ -250,8 +237,18 @@ returns = 'no content'
 method = 'PUT'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 post_fields = {
-		'some fields for update shift fields. Like in Shift Update ability'
-	} 
+                'submitted_nurse_shift_files': <type: list. Optional>,
+                'fields for update shift'...
+            }
+            # Note:
+            	'submitted_nurse_shift_files' - cannot be empty. Can contain one file path.
+            	'submitted_nurse_shift_files' - is an array with file paths.
+            	example:
+            		{
+            			'submitted_nurse_shift_files': ['/uploads/test/folder/test_icon.png']
+            			 OR
+            			'submitted_nurse_shift_files': ['/uploads/test/folder/file1.pdf', '/uploads/test/folder/file2.pdf', ...]
+            		}
 
 returns = {
 	'shift data. Read `get_shift.py`'
