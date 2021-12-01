@@ -160,12 +160,14 @@ returns = {
 method = 'PATCH'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 patch_fields = 'can contain this fields':('email', 'fname', 'lname', 'ssn', 'classification', 'address', 'city',
-                  'st', 'zipcode', 'phone', 'phone2', 'hire_date', 'term_date', 'dob')
+                  'st', 'zipcode', 'phone', 'phone2', 'hire_date', 'term_date', 'dob', 'photo')
 	# Note: all fields is string type.
+	# photo - path to avatar file.
 	example:{
 		"fname": "TestTest",
 		"lname": "LastLast",
 		"hire_date": "2021-04-12",
+		"photo": "/uploads/avatar/vfnams/doctor-nurse.jpg"
 		"term_date": null
 	}
 
@@ -183,6 +185,7 @@ returns = example: {
 	    "phone2": "",
 	    "hire_date": "2021-04-12",
 	    "term_date": null,
+	    "photo": "/uploads/avatar/vfnams/doctor-nurse.jpg"
 	    "dob": "2021-10-06"
 	}
 
