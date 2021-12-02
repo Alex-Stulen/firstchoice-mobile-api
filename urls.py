@@ -137,7 +137,7 @@ post_fields = {
 		'issue_date': <type: string. format: YYYY-MM-DD. Optional>, 
 		'expire_date': <type: string. format: YYYY-MM-DD. Optional>, 
 		'description': <type: string. Required>,
-		'file': <type: file. Required>
+		'file': <type: string, path to file. Required> # should start with `/uploads/`
 	}
 
 returns = {

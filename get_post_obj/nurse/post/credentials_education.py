@@ -7,7 +7,7 @@ post_fields = {
 		'issue_date': <type: string. format: YYYY-MM-DD. Optional>, 
 		'expire_date': <type: string. format: YYYY-MM-DD. Optional>, 
 		'description': <type: string. Required>,
-		'file': <type: file. Required>
+		'file': <type: string, path to file. Required>
 	}
 
 returns = {
@@ -39,7 +39,7 @@ post_fields = {
 		'name': <type: string. Required>,
 		'date': <type: string. format: YYYY-MM-DD. Optional>, 
 		'score': <type: string. string.Optional>, 
-		'description': <type: string. Oprional>
+		'description': <type: string. Oprional> # should start with `/uploads/`
 	}
 
 returns = {
