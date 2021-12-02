@@ -6,6 +6,10 @@
 '/api/v1/mobile/auth/logout'                       # Logout url. Read `auth/logout.py`
 
 '/api/v1/mobile/obj/nurse'                         # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
+'/api/v1/mobile/nurse/add-credential'		   # Creane new Nurse credential entry.
+'/api/v1/movibe/nurse/get-all-credentials'	   # Get all Nurse Credentials.
+'/api/v1/mobile/nurse/add-education'		   # Create new Nurse education entry.
+'/api/v1/mobile/nurse/get-all-educations' 	   # Get all Nurse Educations.
 '/api/v1/mobile/obj/nurse/profile/update'	   # Updated fields for current nurse
 '/api/v1/mobile/obj/nurse/profile/change-password' # Updated Nurse password
 '/api/v1/mobile/obj/nurse/assigned-shifts'         # Get current Nurse assigned shifts. Read `get_post_obj/nurse/get_assigned_shifts.py`
