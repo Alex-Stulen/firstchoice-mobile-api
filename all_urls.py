@@ -1,9 +1,12 @@
 
 
-'/api/v1/mobile/auth/login'                        # Login url. Read `auth/login.py`
-'/api/v1/mobile/auth/verification'                 # Verification url. Read `auth/verification.py`
-'/api/v1/mobile/auth/verification-by-dob'          # Verification by user date of birth
-'/api/v1/mobile/auth/logout'                       # Logout url. Read `auth/logout.py`
+'/api/v1/mobile/auth/login'                        		# Login url. Read `auth/login.py`
+'/api/v1/mobile/auth/verification'                 		# Verification url. Read `auth/verification.py`
+'/api/v1/mobile/auth/verification-by-dob'          		# Verification by user date of birth
+'/api/v1/mobile/auth/logout'                       		# Logout url. Read `auth/logout.py`
+
+'/api/mobile/obj/facility'                         	    	# Get current Facility Admin detail info
+'/api/mobile/obj/facility/<int:facility_id>/get-future-shifts'  # Get all futures shifts for special facility
 
 '/api/v1/mobile/obj/nurse'                         # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
 '/api/v1/mobile/nurse/add-credential'		   # Creane new Nurse credential entry.
