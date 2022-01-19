@@ -7,6 +7,9 @@
 
 '/api/mobile/obj/facility'                         	    	# Get current Facility Admin detail info
 '/api/mobile/obj/facility/<int:facility_id>/get-future-shifts'  # Get all futures shifts for special facility
+'/api/mobile/obj/facility/shift/<int:shift_id>/set-as_certified'# Set special shift as certified
+'/api/mobile/obj/facility/shift/<int:shift_id>/set-as-rejected'	# Set special shift as rejected
+'api/mobile/obj/facility/shift/get-all-by-status'		# Get all shifts by special status. Ex: .../get-all-by-status?status=pending
 
 '/api/v1/mobile/obj/nurse'                         # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
 '/api/v1/mobile/nurse/add-credential'		   # Creane new Nurse credential entry.
