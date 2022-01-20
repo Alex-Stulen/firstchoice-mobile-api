@@ -1,5 +1,5 @@
 # Get current Facility Admin Detail info
-'https://dev.firstchoicenurses.com/api/v1/mobile/obj/facility'
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/facility/admin-detail-info'
 method = 'GET'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 get_fields = 'special get fields are not needed'
