@@ -137,7 +137,12 @@ method = 'GET'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 get_fields = 'special get fields are not needed'
 
-returns = 'array with hospitals ids'
+returns = [
+	    {
+		"id": 999,
+		"name": "Test Test"
+	    }
+	]
 
 
 """===================================================================="""
