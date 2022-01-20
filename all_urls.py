@@ -6,6 +6,7 @@
 '/api/v1/mobile/auth/logout'                       		# Logout url. Read `auth/logout.py`
 
 '/api/mobile/obj/facility/admin-detail-info'			     # Get current Facility Admin detail info
+'/api/mobile/obj/facility/all-admin-hospitals'			     # Get all hospitals ids for current facility admin
 '/api/mobile/obj/facility/<int:facility_id>/get-future-shifts'       # Get all futures shifts for special facility
 '/api/mobile/obj/facility/shift/<int:shift_id>/set-as_certified'     # Set special shift as certified
 '/api/mobile/obj/facility/shift/<int:shift_id>/set-as-rejected'	     # Set special shift as rejected
