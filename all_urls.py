@@ -33,6 +33,7 @@
 '/api/v1/mobile/obj/shift/<int:pk>/clock-in'       # Indicates the fields to shift when the nurse started the shift
 '/api/v1/mobile/obj/shift/<int:pk>/clock-out'      # Indicates the fields to shift when the nurse stop the shift
 '/api/v1/mobile/obj/shift/<pk>/update'             # Endpoint for update shift
+'/api/v1/mobile/obj/shift/<int:shift_pk>/booked>'  # Booke nurse to shift
 '/api/v1/mobile/obj/shift/filter'                  # Filter shifts by hospitals and internal_from && internal_to datetime
 
 '/api/v1/mobile/obj/hospital/list'                 # Returns all hospitals
