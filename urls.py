@@ -375,6 +375,16 @@ returns = 'returns array with nurse objects'
 
 """===================================================================="""
 
+# Get special Nurse detail info
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/<int:nurse_id>/detail-info'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed'
+
+returns = 'returns detail info about nurse. Read `get_nurse_detail_info.py`'
+
+"""===================================================================="""
+
 # Create current Nurse Credential.
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/add-credential'
 method = 'POST'

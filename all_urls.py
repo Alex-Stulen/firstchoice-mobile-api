@@ -14,9 +14,10 @@
 '/api/mobile/obj/facility/shift/<int:facility_id>/get-all-by-status?status=...' # Get all shifts by special status for special hospital
 '/api/mobile/obj/facility/hospital/<int:hospital_id>/detail-info'               # Get detail info about special hospital
 
-'/api/v1/mobile/obj/nurse'                         # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
-'/api/v1/mobile/obj/nurse/search'		   # Search nurse by fname or lname fields
-'/api/v1/mobile/nurse/add-credential'		   # Creane new Nurse credential entry.
+'/api/v1/mobile/obj/nurse'                            # Get current Nurse detail info. Read `get_post_obj/nurse/get_nurse.py`
+'/api/v1/mobile/obj/nurse/<int:nurse_id>/detail-info' # Get special Nurse detail info
+'/api/v1/mobile/obj/nurse/search'		      # Search nurse by fname or lname fields
+'/api/v1/mobile/nurse/add-credential'		      # Creane new Nurse credential entry.
 '/api/v1/mobile/nurse/update-credential/<int:id>'  # Update Nurse Credential
 '/api/v1/movibe/nurse/get-all-credentials'	   # Get all Nurse Credentials.
 '/api/v1/mobile/nurse/add-education'		   # Create new Nurse education entry.
