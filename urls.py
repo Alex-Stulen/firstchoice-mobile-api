@@ -374,6 +374,7 @@ get_fields = {
 
 returns = {
     "total_pages": <type: int>,
+    "page_size": <type: int>,
     "current_page": <type: int>,
     "data": <type: array. Array with nurses objects>
 }
