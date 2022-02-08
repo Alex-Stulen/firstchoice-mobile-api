@@ -391,6 +391,58 @@ returns = 'returns detail info about nurse. Read `get_nurse_detail_info.py`'
 
 """===================================================================="""
 
+# Get all departments records
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/facility/dept/get-all-departments?page=...'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = {
+		'page': <type: integer. Optional. Default = 1>
+	}
+
+returns = 'returns detail info about departments. Read `get_all_depts.py`'
+
+"""===================================================================="""
+
+# Get departments for special hospital
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/facility/dept/dept/<int:hospital_id>/get-all-departments'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed'
+
+returns = 'returns detail info about departments. Read `get_all_depts.py`'
+
+"""===================================================================="""
+
+# Get all classifications for special hospital
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/facility/hospital/<int:hospital_id>/get-all-classifications'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed'
+
+returns = 'returns detail info about departments. Read `get_classifications.py`'
+
+"""===================================================================="""
+
+# Create Shift Record
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/facility/shift/create'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields = {
+	    "department": <type: string. Required>,
+	    "date": <type: integer (timestamp). Required>,
+	    "classification": <type: string. Required>,
+	    "start_datetime": <type: integer (timestamp). Required>,
+	    "stop_datetime": <type: integer (timestamp). Required>,,
+	    "hospital": <type: integer (primary_key). Required>,
+	    "shift": <type: string (example: '8A-5P'). Optional>,
+	    "comments": <type: string. Optional>,
+	    "client": <type: string. Optional>
+	}
+
+returns = 'returns detail info about shift'
+
+"""===================================================================="""
+
 # Create current Nurse Credential.
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/add-credential'
 method = 'POST'
