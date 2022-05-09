@@ -36,6 +36,7 @@
 '/api/v1/mobile/obj/nurse/cancel-assign-to-shift'  # Remove nurse from special shift
 '/api/v1/mobile/obj/nurse/past-shifts'		   # Get all past shifts for nurse
 '/api/v1/mobile/obj/nurse/certified-shifts'        # Get current Nurse certified shifts. Read `get_post_obj/nurse/get_certified_shifts.py`
+'/api/v1/mobile/obj/nurse/all-booked-shifts'	   # Get all booked Shifts for Nurse
 
 '/api/v1/mobile/obj/shift/<int:pk>/clock-in'       # Indicates the fields to shift when the nurse started the shift
 '/api/v1/mobile/obj/shift/<int:pk>/clock-out'      # Indicates the fields to shift when the nurse stop the shift

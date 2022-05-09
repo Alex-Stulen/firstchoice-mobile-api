@@ -818,6 +818,21 @@ returns = {
 
 """===================================================================="""
 
+# Nurse get all booked shifts
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/all-booked-shifts'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed' 
+
+returns = [
+			{'shift object. Read `get_shift.py`'},
+			...,
+			...,
+			{'shift object. Read `get_shift.py`'}
+		]
+
+"""===================================================================="""
+
 # Clock-in/CLock-out shift ability
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/<int:pk>/(clock-in/clock-out)'
 method = 'PATCH'
