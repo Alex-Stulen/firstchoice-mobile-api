@@ -833,6 +833,277 @@ returns = [
 
 """===================================================================="""
 
+# Nurse get all Core Credential records
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/get-all-core-credentials'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = 'special get fields are not needed'
+
+returns = [
+		{
+			"id": <integer: some id>,
+			"title": "Identifying Documents",
+			"expiration_date": 1654722000,
+			"notes": "None"
+		},
+		{
+			"id": <integer: some id>,
+			"title": "PPD",
+			"expiration_date": 1655067600,
+			"notes": "None"
+		},
+		{
+			"id": <integer: some id>,
+			"title": "Professional License",
+			"expiration_date": "None",
+			"notes": "None"
+		},
+		{
+			"id": <integer: some id>,
+			"title": "BLS",
+			"expiration_date": 1655067600,
+			"notes": "None"
+		},
+		{
+			"id": <integer: some id>,
+			"title": "License Look Up",
+			"expiration_date": "None",
+			"notes": "None"
+		},
+		{
+			"id": <integer: some id>,
+			"title": "Urine Drug Screen",
+			"expiration_date": "None",
+			"notes": "TESssssssT"
+		},
+		{
+			"id": <integer: some id>,
+			"title": "Flu Vaccine",
+			"expiration_date": 1654981200,
+			"notes": "Declined"
+		}
+	]
+
+"""===================================================================="""
+
+# Nurse. Update Core Credential
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/<int:core_cred_id>'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_url_fields = '<int:core_cred_id> in request url'
+for 'Urine Drug Screen' core cred:
+	post_fields = {
+		'date_completed_results': <type: integer. Timestamp. Optional>,
+		'result': <type: string, Optional>,
+		'notes': <type: string, Optional>,
+		'file': <type: string. Path to uploaded file. Optional>
+	}
+
+for 'Flu Vaccine' core cred:
+	post_fields = {
+		'expiration_date': <type: integer, Timestamp, Optional>,
+		'notes': <type: string. Optional>,
+		'declination_bool': <type: bool, Optional>,
+		'file': <type: string. Path to uploaded file. Optional>
+	}
+
+for 'PPD' core cred:
+	post_fields = {
+		'ppd_type': <type: string or null. Optional>,
+		'expiration_date': <type: integer, Timestamp, Optional>,
+		'notes': <type: string. Optional>,
+		'file': <type: string. Path to uploaded file. Optional>
+	}
+
+for 'BLS' core cred:
+	post_fields = {
+	  'expiration_date': < type: integer, Timestamp, Optional >,
+	  'notes': < type: string.Optional>,
+	  'file': <type: string. Path to uploaded file. Optional>
+	}
+
+for 'Professional License' core cred:
+	post_fields = {
+		'type': < type: string or null.Optional>,
+	  	'expiration_date': < type: integer, Timestamp, Optional >,
+		'state': <type: string or null. Optional>,
+		'note': <type: string, Optional>,
+		'chose_file': <type: file. Optional>
+	}
+
+returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail msg...'}
+
+"""===================================================================="""
+
+# Nurse get info about Core Credential record
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/get-info/<int:core_cred_id>'
+method = 'GET'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+get_fields = '<int:core_cred_id> in request url'
+
+for 'Urine Drug Screen' core cred:
+	returns = {
+		"title": "Urine Drug Screen",
+		"date_completed_results": 1655067600,
+		"result": "TESssssssT",
+		"notes": "TEST NOTES",
+		"files": [
+			{
+				"id": 31,
+				"file_url": "/uploads/vaccine/test.jpg"
+			},
+			...
+		]
+	}
+
+for 'Flu Vaccine':
+	returns = {
+		"title": "Flu Vaccine",
+		"expiration_date": 1654981200,
+		"notes": "TEST NOTEsssssS",
+		"declination_bool": true,
+		"files": [
+			{
+				"id": 31,
+				"file_url": "/uploads/vaccine/test.jpg"
+			},
+			...
+		]
+	}
+
+for 'PPD' core cred:
+	returns = {
+		"title": "PPD",
+		"ppd_type": null,
+		"expiration_date": 1655067600,
+		"notes": "TEST NOTEsssssSdasdasd",
+		"files": [
+			{
+				"id": 31,
+				"file_url": "/uploads/vaccine/test.jpg"
+			}
+		],
+		"ppd_allowed_types": [
+			null,
+			"XRay",
+			"PPD 1",
+			"PPD 2",
+			"TB Screening"
+		]
+	}
+
+for 'BLS' core cred:
+	returns = {
+		"title": "BLS",
+		"expiration_date": 1655067600,
+		"notes": "TEST NOTEsssssSdasdasd",
+		"files": [
+			{
+				"id": 33,
+				"file_url": "/uploads/vaccine/test.jpg"
+			},
+			...
+		]
+	}
+
+for 'Professional License' core cred:
+	returns = {
+		"type": "CNA",
+		"expiration_date": 1655067600,
+		"sub_core_id": <type: integer or null. INT If sub core is exists else NULL>,
+		"state": "AK",
+		"note": "",
+		"chose_file": "/uploads/vaccine/test.jpg",
+		"core_cred_id": 3,
+		"title": "Professional License",
+		"allowed_states": [
+			null,
+			"AK",
+			"AL",
+			"AR",
+			"AZ",
+			"CA",
+			"CO",
+			"CT",
+			"DC",
+			"DE",
+			"FL",
+			"GA",
+			"HI",
+			"IA",
+			"ID",
+			"IL",
+			"IN",
+			"KS",
+			"KY",
+			"LA",
+			"MA",
+			"MD",
+			"ME",
+			"MI",
+			"MN",
+			"MO",
+			"MS",
+			"MT",
+			"NC",
+			"ND",
+			"NE",
+			"NH",
+			"NJ",
+			"NM",
+			"NV",
+			"NY",
+			"OH",
+			"OK",
+			"OR",
+			"PA",
+			"PR",
+			"RI",
+			"SC",
+			"SD",
+			"TN",
+			"TX",
+			"UT",
+			"VA",
+			"VT",
+			"WA",
+			"WI",
+			"WV",
+			"WY"
+		],
+		"allowed_types": [
+			null,
+			"CNA",
+			"LPN",
+			"RN"
+		]
+	}
+
+"""===================================================================="""
+
+# Nurse remove file for Core Credentials. Only for: ('PPD', 'BLS', 'Urine Drug Screen', 'Flu Vaccine')
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/remove-file'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields = {
+	'file_id': <type: integer. ID for file record in DB. Required>
+}
+
+returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail...'}
+
+"""===================================================================="""
+
+# Nurse remove file for Core Credentials. Only for: ('Professional License')
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/sub-core/remove-file'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields = {
+	'sub_core_id': <type: integer. ID for sub core record in DB>
+}
+returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail...'}
+
+"""===================================================================="""
+
 # Clock-in/CLock-out shift ability
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/shift/<int:pk>/(clock-in/clock-out)'
 method = 'PATCH'
