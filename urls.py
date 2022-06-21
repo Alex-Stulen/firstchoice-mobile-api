@@ -925,6 +925,112 @@ returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail
 
 """===================================================================="""
 
+# Update License Look Up instance. Only for CNA, LPN and RN types
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:core_cred_id> - id for core credential. In request url. Required'
+post_fields = {
+    "type": <type: string. Only CNA, LPN or RN. Required>,
+    "note": <type: string. MaxLength: 2048. Optional>,
+    "state": <type: string. MaxLength: 2, Optional>,
+    "expiration_date": <type: int. Timestamp. Optional>,
+    "chose_file": <type: file. Optional>
+}
+
+returns = {
+        "status": "ok",
+        "object": {
+            "id": 12,
+            "type": "CNA",
+            "note": null,
+            "state": "VA",
+            "expiration_date": 1655672400,
+            "chose_file": "/uploads/core_credentials/Image_upload_test_lkwl9wn.jpg"
+        },
+        "core_credential_pk": 2
+    }
+
+"""===================================================================="""
+
+# Remove file for Look Up instance. Only for CNA, LPN and RN types
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-file'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:core_cred_id> - id for core credential. In request url. Required'
+post_fields = 'no need'
+
+returns = {'status': 'ok'} or {'status': 'fail'}
+
+"""===================================================================="""
+
+# Add other for License Look Up instance
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/add-other'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:core_cred_id> - id for core credential. In request url. Required'
+post_fields = {
+    "note": <type: string. MaxLength: 2048. Optional>,
+    "state": <type: string. MaxLength: 2, Optional>,
+    "expiration_date": <type: int. Timestamp. Optional>,
+    "chose_file": <type: file. Optional>
+}
+
+returns = {
+    "status": "ok",
+    "object": {
+        "id": 13,
+        "type": "other",
+        "note": null,
+        "state": null,
+        "expiration_date": null,
+        "chose_file": null,
+        "sub_core_credential": 12
+    },
+    "core_credential_pk": 2
+}
+
+"""===================================================================="""
+
+# Update other for License Look Up
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/other/update/<int:other_id>'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:other_id> - id for other object. In request url. Required'
+post_fields = {
+    "note": <type: string. MaxLength: 2048. Optional>,
+    "state": <type: string. MaxLength: 2, Optional>,
+    "expiration_date": <type: int. Timestamp. Optional>,
+    "chose_file": <type: file. Optional>
+}
+
+returns = {
+    "status": "ok",
+    "object": {
+        "id": 13,
+        "type": "other",
+        "note": null,
+        "state": null,
+        "expiration_date": null,
+        "chose_file": null,
+        "sub_core_credential": 12
+    }
+}
+
+"""===================================================================="""
+
+# Remove file only for other for License Look Up
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/other/<int:other_id>/remove-file'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:other_id> - id for other object. In request url. Required'
+post_fields = 'no need'
+
+returns = {'status': 'ok'} or {'status': 'fail'}
+
+"""===================================================================="""
+
+
 # Nurse. Update Core Credential
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/<int:core_cred_id>'
 method = 'POST'

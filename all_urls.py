@@ -41,6 +41,11 @@
 '/api/v1/mobile/obj/nurse/core-credential/identifying-documents/create/<int:core_cred_id>' # Create Identifying Document instance
 '/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/remove-file' # Remove file for Identifying Document instance
 '/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/delete' # Delete Identifying Document instance
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>' # Update License Look Up. Only for CNA, LPN and RN types
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-file' # Remove file for License Look Up. Only for CNA, LPN and RN types
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/add-other' # Add other for License Look Up
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/other/update/<int:other_id>' # Update other for License Look Up
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/other/<int:other_id>/remove-file' # Remove file only for other for License Look Up
 '/api/v1/mobile/obj/nurse/core-credential/update/<int:core_cred_id>' # Update Core Credential for Nurse
 '/api/v1/mobile/obj/nurse/core-credential/get-info/<int:core_cred_id>' # Get info about Nurse Core Credential
 '/api/v1/mobile/obj/nurse/core-credential/remove-file' # Remove file for Core Credentials. Only for: ('PPD', 'BLS', 'Urine Drug Screen', 'Flu Vaccine')
