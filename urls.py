@@ -886,6 +886,45 @@ returns = [
 
 """===================================================================="""
 
+# Create Identifying Document instance
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/identifying-documents/create/<int:core_cred_id>'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:core_cred_id> - id for core credential. In request url. Required'
+post_fields = {
+            "document_dropdown": <type: string. Required>,
+            "name_of_the_id": <type: string. Optional>,
+            "name_of_the_document": <type: string. Optional>,
+            "expiration_date": <type: int. Timestamp. Optional>,
+            "choose_file": <type: file. Optional>,
+        }
+
+returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail...'}
+
+"""===================================================================="""
+
+# Remove file for Identifying Document instance
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/remove-file'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:document_id> - id for document. In request url. Required'
+post_fields = 'no need'
+
+returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail...'}
+
+"""===================================================================="""
+
+# Delete Identifying Document instance
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/delete'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:document_id> - id for document. In request url. Required'
+post_fields = 'no need'
+
+returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail...'}
+
+"""===================================================================="""
+
 # Nurse. Update Core Credential
 'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/<int:core_cred_id>'
 method = 'POST'
@@ -896,7 +935,7 @@ for 'Urine Drug Screen' core cred:
 		'date_completed_results': <type: integer. Timestamp. Optional>,
 		'result': <type: string, Optional>,
 		'notes': <type: string, Optional>,
-		'file': <type: string. Path to uploaded file. Optional>
+	  	'files': <type: array. Array with paths to uploaded file. Optional>
 	}
 
 for 'Flu Vaccine' core cred:
@@ -904,7 +943,7 @@ for 'Flu Vaccine' core cred:
 		'expiration_date': <type: integer, Timestamp, Optional>,
 		'notes': <type: string. Optional>,
 		'declination_bool': <type: bool, Optional>,
-		'file': <type: string. Path to uploaded file. Optional>
+	  	'files': <type: array. Array with paths to uploaded file. Optional>
 	}
 
 for 'PPD' core cred:
@@ -912,14 +951,14 @@ for 'PPD' core cred:
 		'ppd_type': <type: string or null. Optional>,
 		'expiration_date': <type: integer, Timestamp, Optional>,
 		'notes': <type: string. Optional>,
-		'file': <type: string. Path to uploaded file. Optional>
+	  	'files': <type: array. Array with paths to uploaded file. Optional>
 	}
 
 for 'BLS' core cred:
 	post_fields = {
 	  'expiration_date': < type: integer, Timestamp, Optional >,
 	  'notes': < type: string.Optional>,
-	  'file': <type: string. Path to uploaded file. Optional>
+	  'files': <type: array. Array with paths to uploaded file. Optional>
 	}
 
 for 'Professional License' core cred:
@@ -929,6 +968,16 @@ for 'Professional License' core cred:
 		'state': <type: string or null. Optional>,
 		'note': <type: string, Optional>,
 		'chose_file': <type: file. Optional>
+	}
+
+for 'Identifying Documents' core cred:
+	post_fields = {
+		'document_id': <type: int. Id for document objects. Required>,
+		'document_dropdown': <type: string. Required>,
+		'name_of_the_id': <type: string. Optional>,
+		'name_of_the_document': <type: string. Optional>,
+		'expiration_date': < type: integer, Timestamp, Optional >,
+		'choose_file': <type: file. Optional>
 	}
 
 returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail msg...'}
@@ -1077,6 +1126,29 @@ for 'Professional License' core cred:
 			"LPN",
 			"RN"
 		]
+	}
+
+for 'Identifying Documents' core cred:
+	returns = {
+		"allowed_document_dropdowns": [
+			"Government Issued ID",
+			"Social Security Card",
+			"Passport",
+			"Birth Certificate",
+			"Other"
+		],
+		"documents": [
+			{
+				"id": 10,
+				"document_dropdown": "Government Issued ID",
+				"name_of_the_id": "test",
+				"name_of_the_document": null,
+				"expiration_date": 1655758800,
+				"choose_file": null,
+				"core_credential": 1
+			}
+		],
+		...
 	}
 
 """===================================================================="""

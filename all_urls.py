@@ -38,6 +38,9 @@
 '/api/v1/mobile/obj/nurse/certified-shifts'        # Get current Nurse certified shifts. Read `get_post_obj/nurse/get_certified_shifts.py`
 '/api/v1/mobile/obj/nurse/all-booked-shifts'	   # Get all booked Shifts for Nurse
 '/api/v1/mobile/obj/nurse/get-all-core-credentials' # Get all Core Credentials records for Nurse
+'/api/v1/mobile/obj/nurse/core-credential/identifying-documents/create/<int:core_cred_id>' # Create Identifying Document instance
+'/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/remove-file' # Remove file for Identifying Document instance
+'/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/delete' # Delete Identifying Document instance
 '/api/v1/mobile/obj/nurse/core-credential/update/<int:core_cred_id>' # Update Core Credential for Nurse
 '/api/v1/mobile/obj/nurse/core-credential/get-info/<int:core_cred_id>' # Get info about Nurse Core Credential
 '/api/v1/mobile/obj/nurse/core-credential/remove-file' # Remove file for Core Credentials. Only for: ('PPD', 'BLS', 'Urine Drug Screen', 'Flu Vaccine')
