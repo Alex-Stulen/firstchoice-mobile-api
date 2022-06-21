@@ -1086,6 +1086,16 @@ for 'Identifying Documents' core cred:
 		'choose_file': <type: file. Optional>
 	}
 
+for 'License Look Up' core cred. Only for one instance, not for other array:
+	post_fields = {
+		"type": < type: string.Only CNA, LPN or RN.Required >,
+		"note": < type: string.MaxLength: 2048. Optional >,
+		"state": < type: string.MaxLength: 2, Optional >,
+		"expiration_date": < type: int.Timestamp.Optional >,
+		"chose_file": < type: file.Optional >
+	}
+
+
 returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail msg...'}
 
 """===================================================================="""
