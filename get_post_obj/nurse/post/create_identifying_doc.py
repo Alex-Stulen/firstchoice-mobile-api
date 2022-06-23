@@ -8,7 +8,7 @@ post_fields = {
             "name_of_the_id": <type: string. Optional>,
             "name_of_the_document": <type: string. Optional>,
             "expiration_date": <type: int. Timestamp. Optional>,
-            "choose_file": <type: file. Optional>,
+            "files": <type: file. Optional>,
         }
 
 returns = {'status': 'ok'} or {'status': 'fail', 'detail': '...some error detail...'}

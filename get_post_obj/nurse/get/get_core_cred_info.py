@@ -140,3 +140,105 @@ for 'Professional License' core cred:
             "RN"
         ]
     }
+
+for 'Identifying Documents' core cred:
+    returns = {
+    "allowed_document_dropdowns": [
+        "Government Issued ID",
+        "Social Security Card",
+        "Passport",
+        "Birth Certificate",
+        "Other"
+    ],
+    "documents": [
+        {
+            "id": 10,
+            "document_dropdown": "Government Issued ID",
+            "name_of_the_id": "test",
+            "name_of_the_document": null <type: string or null>,
+            "expiration_date": 1655758800,
+            "chose_file": null <type: string or null>,
+            "core_credential": 1
+        }
+    ]
+}
+
+for 'License Loop Up' core cred:
+    # if res_type == 'others' -> response contain 'others' field (type: array with other objects)
+    # if res_type == 'object' -> response contain 'object' field (type: dict for Python, object for JS with object data)
+
+    returns = {
+    "res_type": "others",
+    "allowed_types": [
+        "CNA",
+        "LPN",
+        "RN",
+        "other"
+    ],
+    "allowed_states": [
+        null,
+        "AK",
+        "AL",
+        "AR",
+        "AZ",
+        "CA",
+        "CO",
+        "CT",
+        "DC",
+        "DE",
+        "FL",
+        "GA",
+        "HI",
+        "IA",
+        "ID",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "LA",
+        "MA",
+        "MD",
+        "ME",
+        "MI",
+        "MN",
+        "MO",
+        "MS",
+        "MT",
+        "NC",
+        "ND",
+        "NE",
+        "NH",
+        "NJ",
+        "NM",
+        "NV",
+        "NY",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "PR",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "VT",
+        "WA",
+        "WI",
+        "WV",
+        "WY"
+    ],
+    "others": [
+        {
+            "id": 13,
+            "type": "other",
+            "note": null <type: string or null>,
+            "state": null <type: string or null>,
+            "expiration_date": null <type int or null. Timestamp>,
+            "chose_file": null <type: string or null>
+        }
+    ],
+    "core_credential_id": 2
+}

@@ -8,7 +8,7 @@ post_fields = {
     "note": <type: string. MaxLength: 2048. Optional>,
     "state": <type: string. MaxLength: 2, Optional>,
     "expiration_date": <type: int. Timestamp. Optional>,
-    "chose_file": <type: file. Optional>
+    'files': <type: array. Array with paths to uploaded file. Optional>
 }
 
 returns = {
