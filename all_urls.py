@@ -42,7 +42,8 @@
 '/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/remove-file' # Remove file for Identifying Document instance
 '/api/v1/mobile/obj/nurse/core-credential/identifying-documents/<int:document_id>/delete' # Delete Identifying Document instance
 '/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>' # Update License Look Up. Only for CNA, LPN and RN types
-'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-file' # Remove file for License Look Up. Only for CNA, LPN and RN types
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-file/<int:file_id>' # Remove file for License Look Up by id. Only for CNA, LPN and RN types
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-multiple-files' # Remove multiple files for License Look Up by id. Only for CNA, LPN and RN types
 '/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/add-other' # Add other for License Look Up
 '/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/other/update/<int:other_id>' # Update other for License Look Up
 '/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/other/<int:other_id>/remove-file' # Remove file only for other for License Look Up

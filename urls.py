@@ -953,12 +953,26 @@ returns = {
 
 """===================================================================="""
 
-# Remove file for Look Up instance. Only for CNA, LPN and RN types
-'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-file'
+# Remove file for Look Up instance by id. Only for CNA, LPN and RN types
+'https://dev.firstchoicenurses.com/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-file/<int:file_id>'
+method = 'POST'
+headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
+post_fields_url = '<int:core_cred_id> - id for core credential. In request url. Required',
+				  '<int:file_id> - id for file. In request url. Required'
+post_fields = 'no need'
+
+returns = {'status': 'ok'} or {'status': 'fail'}
+
+"""===================================================================="""
+
+# Remove multiple files for License Look Up by ids. Only for CNA, LPN and RN types
+'/api/v1/mobile/obj/nurse/core-credential/update/license-look-up/<int:core_cred_id>/remove-multiple-files'
 method = 'POST'
 headers = REQUIRED_HEADERS_FOR_TOKEN_AUTH
 post_fields_url = '<int:core_cred_id> - id for core credential. In request url. Required'
-post_fields = 'no need'
+post_fields = {
+	"file-ids": [<type: int>, <type: int>, ...] # Insert sub_core object id
+}
 
 returns = {'status': 'ok'} or {'status': 'fail'}
 
