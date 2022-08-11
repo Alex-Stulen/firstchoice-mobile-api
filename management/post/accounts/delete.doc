@@ -1,0 +1,22 @@
+# Endpoint to delete user account. Only for superuser
+
+url: '/api/v1/mobile/delete-account'
+method: 'POST'
+headers:  REQUIRED_HEADERS_FOR_TOKEN_AUTH
+
+request: 
+	Must Include 'user_id' field. Type: integer OR string. Required
+	Example:
+		{
+			"user_id": 999
+		}
+
+Response:
+	400 - Bad request. Includes an error message in the response
+	401 - Bad Token Authorization
+	403 - Forbidden. This feature is only available for the superuser
+	404 - Not Found. User with user_id in request does not exist
+	
+	200 - Success. User has been deleted:
+		body: {'status': 'ok'}
+
